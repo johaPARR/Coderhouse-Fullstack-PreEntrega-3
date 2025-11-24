@@ -1,0 +1,98 @@
+// ================== BUTTONS COMPONENT ==================
+
+// Importamos los mixins desde utilities
+@use '../utilities/mixin' as mixin;
+
+// ----------------- BOTONES DEL MENÚ -----------------
+.btn-menu {
+  @include mixin.button-menu; // Aplicamos el mixin del menú
+}
+
+.btn-menu:hover {
+  background: linear-gradient(90deg, #000000, #ff0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.1);
+}
+
+// ----------------- BOTONES DEL FOOTER -----------------
+.btn-footer {
+  @include mixin.button-footer; // Aplicamos el mixin del footer
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn-footer:hover {
+  background: linear-gradient(180deg, #d24da5 0%, #6d2055 100%);
+  transform: scale(1.05);
+}
+
+// ----------------- MEDIA QUERIES PARA BOTONES -----------------
+@media (max-width: 320px) {
+  .btn-footer {
+    width: 100%;
+    font-size: 22px;
+    line-height: 45px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 375px) and (min-width: 321px) {
+  .btn-footer {
+    width: 95%;
+    font-size: 23px;
+    line-height: 48px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 414px) and (min-width: 376px) {
+  .btn-footer {
+    width: 90%;
+    font-size: 25px;
+    line-height: 50px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 480px) and (min-width: 361px) {
+  .btn-footer {
+    width: 90%;
+    font-size: 28px;
+    line-height: 60px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 415px) {
+  .btn-footer {
+    width: 85%;
+    font-size: 26px;
+    line-height: 55px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+  .btn-footer {
+    width: 90%;
+    font-size: 28px;
+    line-height: 60px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .btn-footer {
+    width: 357px;
+    height: 143px;
+    font-size: 32px;
+    line-height: 143px;
+    padding: 0;
+  }
+}

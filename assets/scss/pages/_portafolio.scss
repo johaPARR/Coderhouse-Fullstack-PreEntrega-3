@@ -1,0 +1,13 @@
+/* Ejemplo: imágenes principales en portafolio */
+.main-content .container .row .col-12 img,
+.main-content .container .row .col-md-6 img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.main-content .container .row .col-12 img:hover,
+.main-content .container .row .col-md-6 img:hover {
+  transform: scale(1.05);
+}

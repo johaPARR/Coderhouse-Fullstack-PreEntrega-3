@@ -1,0 +1,21 @@
+// ===================== FOOTER =====================
+
+// Importamos mixins y extends
+@use '../utilities/mixin' as *;
+@use '../utilities/extend' as *;
+
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 0;
+  flex-wrap: wrap;
+}
+
+footer p,
+footer span,
+footer li {
+  font-size: 1.3125rem;
+  line-height: 1.5;
+  color: #fff;
+}

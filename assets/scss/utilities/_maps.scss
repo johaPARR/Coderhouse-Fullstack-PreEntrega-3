@@ -1,0 +1,70 @@
+// ----------------- MAPS / VARIABLES -----------------
+
+// Colores sólidos
+$colors: (
+  white: #fff,
+  black: #000,
+  light-pink: #ffb6c1,
+  light-gray: #d3d3d3,
+  dark-red: #924545,
+  darker-red: #2C1515,
+  red: #ff0000,
+  footer-start: #C23693,
+  footer-end: #5C1946,
+  footer-hover-start: #d24da5,
+  footer-hover-end: #6d2055,
+  border: #ccc
+);
+
+// Gradientes
+$gradients: (
+  header-title: linear-gradient(90deg, #924545 0%, #2C1515 100%),
+  menu-link: linear-gradient(90deg, #ff0000, #000000),
+  menu-link-hover: linear-gradient(90deg, #000000, #ff0000),
+  main-bg: linear-gradient(135deg, #ffb6c1, #d3d3d3),
+  footer-bg: linear-gradient(180deg, #C23693 0%, #5C1946 100%),
+  footer-bg-hover: linear-gradient(180deg, #d24da5 0%, #6d2055 100%)
+);
+
+// Tipografías
+$fonts: (
+  main: ('Irish Grover', cursive)
+);
+
+// Tamaños de fuentes
+$font-sizes: (
+  h1: 66px,
+  h1-xl: 66px,
+  h1-lg: 56px,
+  h1-md: 44px,
+  h1-sm: 38px,
+  h1-xs: 32px,
+  body: 1.3125rem,
+  label-input: 1.4375rem,
+  h2: 1.5rem,
+  subtitle: 1.5rem,
+  button-footer: 32px,
+  button-footer-xs: 22px
+);
+
+// Border-radius
+$border-radius: (
+  input: 5px,
+  footer-button: 10px
+);
+
+// Breakpoints (según tus media queries)
+$breakpoints: (
+  xs: 320px,
+  sm: 375px,
+  md: 414px,
+  lg: 480px,
+  xl: 768px,
+  xxl: 992px
+);
+
+// Dimensiones de botones
+$button-dimensions: (
+  footer-width: 357px,
+  footer-height: 143px
+);

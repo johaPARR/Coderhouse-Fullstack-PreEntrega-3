@@ -1,0 +1,28 @@
+// ===================== BASE =====================
+// Variables, configuraciones generales y media queries
+@use 'base/variables' as *;
+@use 'base/generales' as *;
+@use 'base/queries' as *;
+
+// ===================== UTILITIES =====================
+// Mixins, extends y maps
+@use 'utilities/mixin' as *;
+@use 'utilities/extend' as *;
+@use 'utilities/maps' as *;
+
+// ===================== SECTIONS =====================
+// Componentes principales de la sección
+@use 'sections/main' as *;
+
+// ===================== COMPONENTES =====================
+// Botones, header, footer
+@use 'components/buttons' as *;
+@use 'components/header' as *;
+@use 'components/footer' as *;
+
+// ===================== PAGES =====================
+// Estilos específicos por página
+@use 'pages/portafolio' as *;
+@use 'pages/clientes' as *;
+@use 'pages/servicios' as *;
+@use 'pages/contacto' as *;

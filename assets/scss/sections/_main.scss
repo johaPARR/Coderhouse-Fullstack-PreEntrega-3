@@ -1,0 +1,48 @@
+/* ----------------- MAIN ----------------- */
+main {
+  background: linear-gradient(135deg, #ffb6c1, #d3d3d3);
+  padding: 40px 0;
+}
+
+.main-content .container .row .col-12 img,
+.main-content .container .row .col-md-6 img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.5s ease; /* transición para zoom */
+}
+
+.main-content .container .row .col-12 img:hover,
+.main-content .container .row .col-md-6 img:hover {
+  transform: scale(1.05); /* zoom al pasar mouse */
+}
+
+/* ---------- MODIFICACIÓN  ---------- */
+main h2,
+main p,
+main .cartel {
+  text-align: center;
+}
+
+h2, h3, .subtitulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+p, .descripcion, li {
+  font-size: 1.3125rem;
+  line-height: 1.5;
+}
+
+.texto-contenedor {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.texto-contenedor h2, 
+.texto-contenedor h3, 
+.texto-contenedor p, 
+.texto-contenedor li {
+  margin-bottom: 15px;
+}

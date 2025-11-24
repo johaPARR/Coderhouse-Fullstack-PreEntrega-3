@@ -1,0 +1,68 @@
+// ----------------- MIXINS -----------------
+
+// Mixin para gradientes de texto
+@mixin gradient-text($gradient) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// Mixin para gradientes de fondo
+@mixin gradient-bg($gradient) {
+  background: $gradient;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+// Mixin para media queries
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == xs { @media (max-width: 320px) { @content; } }
+  @else if $breakpoint == sm { @media (max-width: 480px) and (min-width: 321px) { @content; } }
+  @else if $breakpoint == md { @media (max-width: 768px) and (min-width: 415px) { @content; } }
+  @else if $breakpoint == lg { @media (min-width: 769px) { @content; } }
+}
+
+// ==========================================================
+// NUEVOS MIXINS (NECESARIOS PARA QUE COMPILEN TUS BOTONES)
+// ==========================================================
+
+// Mixin general para botones
+@mixin button($width, $height, $font-size, $line-height) {
+  display: inline-block;
+  width: $width;
+  height: $height;
+  font-size: $font-size;
+  line-height: $line-height;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+// Mixin para botón del MENÚ
+@mixin button-menu {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px 10px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  background: linear-gradient(90deg, #ff0000, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// Mixin para botón del FOOTER
+@mixin button-footer {
+  display: inline-block;
+  width: 357px;
+  height: 143px;
+  background: linear-gradient(180deg, #C23693 0%, #5C1946 100%);
+  color: #fff;
+  font-size: 32px;
+  text-align: center;
+  line-height: 143px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
