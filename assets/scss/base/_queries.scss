@@ -1,72 +1,72 @@
-// _queries.scss
+/*=========================================================*/
+/*================== QUERIES RESPONSIVE ==================*/
+/*=========================================================*/
 
-// Breakpoints
-$xs: 320px;
-$sm: 361px;
-$md: 376px;
-$lg: 415px;
-$xl: 480px;
-$xxl: 768px;
-$desktop: 992px;
-
-// --------------------
-// MEDIA QUERIES ORIGINALES
-// --------------------
-@media (max-width: 360px) {
-  h1.titulo { font-size: 36px; }
-  .main-content .img-principal { height: 180px; }
-  input, textarea { width: 100%; }
-  footer a { width: 100%; font-size: 24px; line-height: 50px; height: auto; padding: 10px 0; }
+@media (max-width: 320px) { 
+  footer a.footer-btn { 
+    width: 100%; 
+    font-size: 20px; 
+    line-height: 45px; 
+    height: auto; 
+    padding: 10px 0; 
+  } 
 }
 
-@media (max-width: 480px) and (min-width: 361px) {
-  h1.titulo { font-size: 48px; }
-  .main-content .img-principal { height: 250px; }
-  input, textarea { width: 90%; }
-  footer a { width: 90%; font-size: 28px; line-height: 60px; height: auto; padding: 10px 0; }
+@media (min-width: 321px) and (max-width: 375px) { 
+  footer a.footer-btn { 
+    width: 95%; 
+    font-size: 20px; 
+    line-height: 48px; 
+    height: auto; 
+    padding: 10px 0; 
+  } 
 }
 
-@media (min-width: 992px) {
-  h1.titulo { font-size: 66px; }
-  .main-content .img-principal { height: 400px; }
-  input, textarea { width: 150px; }
-  footer a { width: 357px; height: 143px; font-size: 32px; line-height: 143px; }
+@media (min-width: 376px) and (max-width: 414px) { 
+  footer a.footer-btn { 
+    width: 90%; 
+    font-size: 20px; 
+    line-height: 50px; 
+    height: auto; 
+    padding: 10px 0; 
+  } 
 }
 
-// --------------------
-// NUEVAS 5 VISTAS MÓVILES
-// --------------------
-@media (max-width: 320px) {
-  h1.titulo { font-size: 32px; }
-  .main-content .img-principal { height: 150px; }
-  input, textarea { width: 100%; font-size: 1.2rem; }
-  footer a { width: 100%; font-size: 22px; line-height: 45px; }
+@media (min-width: 415px) and (max-width: 480px) {
+  footer a.footer-btn { 
+    width: 90%; 
+    font-size: 20px; 
+    line-height: 60px; 
+    height: auto; 
+    padding: 10px 0; 
+  }
 }
 
-@media (max-width: 375px) and (min-width: 321px) {
-  h1.titulo { font-size: 34px; }
-  .main-content .img-principal { height: 160px; }
-  input, textarea { width: 95%; font-size: 1.25rem; }
-  footer a { width: 95%; font-size: 23px; line-height: 48px; }
+@media (min-width: 481px) and (max-width: 768px) { 
+  footer a.footer-btn { 
+    width: 85%; 
+    font-size: 20px; 
+    line-height: 55px; 
+    height: auto; 
+    padding: 10px 0; 
+  } 
 }
 
-@media (max-width: 414px) and (min-width: 376px) {
-  h1.titulo { font-size: 38px; }
-  .main-content .img-principal { height: 200px; }
-  input, textarea { width: 90%; font-size: 1.3rem; }
-  footer a { width: 90%; font-size: 25px; line-height: 50px; }
+@media (min-width: 769px) and (max-width: 992px) { 
+  footer a.footer-btn { 
+    width: 90%; 
+    font-size: 20px; 
+    line-height: 60px; 
+    height: auto; 
+    padding: 10px 0; 
+  } 
 }
 
-@media (max-width: 768px) and (min-width: 415px) {
-  h1.titulo { font-size: 44px; }
-  .main-content .img-principal { height: 250px; }
-  input, textarea { width: 85%; font-size: 1.35rem; }
-  footer a { width: 85%; font-size: 26px; line-height: 55px; }
-}
-
-@media (max-width: 992px) and (min-width: 769px) {
-  h1.titulo { font-size: 56px; }
-  .main-content .img-principal { height: 350px; }
-  input, textarea { width: 150px; font-size: 1.4rem; }
-  footer a { width: 90%; font-size: 28px; line-height: 60px; }
+@media (min-width: 992px) { 
+  footer a.footer-btn { 
+    width: auto; 
+    font-size: 20px; 
+    line-height: normal; 
+    padding: 5px 20px; 
+  } 
 }

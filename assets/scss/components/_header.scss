@@ -1,41 +1,122 @@
-// ===================== HEADER =====================
-
-// Importamos mixins y extends
-@use '../utilities/mixin' as *;
-@use '../utilities/extend' as *;
-
+/* =========================================================
+  HEADER / MENÚ
+========================================================= */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  position: relative;
+  margin-top: 10px;
+
+  nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px 15px 30px !important; // Consolidado
+
+    .nav-link {
+      font-weight: bold;
+      font-size: 36px;
+      color: #ff9999;
+      transition: all 0.3s ease;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      margin-right: 15px;
+
+      &:hover {
+        color: #ffc0c0;
+        transform: scale(1.1);
+        text-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+      }
+    }
+  }
 }
 
-h1.titulo {
-  @extend %titulo; // extend de utilities
-  margin: 0;
+// Ocultar hamburguesa en escritorio
+@media (min-width: 992px) {
+  .navbar-toggler {
+    display: none;
+  }
 }
 
-header nav.menu ul {
+/* =========================================================
+  SUBTÍTULO
+========================================================= */
+.subtitulo {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff !important;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  margin: 10px 0 40px 0;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #f7c59f, #f3a683);
+}
+
+/* =========================================================
+  BLOQUES DE IMÁGENES + TEXTO
+========================================================= */
+.image-block {
   display: flex;
+  align-items: flex-start;
+  justify-content: center;
   gap: 30px;
-  list-style: none;
-}
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  opacity: 0; // invisible solo al inicio
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
 
-header nav.menu ul li a {
-  @extend %menu-link; // extend de utilities
-}
+  &.animate__fadeInUp {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-header nav.menu ul li a:hover {
-  background: linear-gradient(90deg, #000000, #ff0000);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transform: scale(1.1);
-}
+  .text-left {
+    width: 250px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5em;
+    color: #333;
+    background-color: #ffe6e6;
+    padding: 15px 12px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    opacity: 0;
+    transition: opacity 1s ease, transform 0.3s ease, box-shadow 0.3s ease;
 
-// Animación para el menú
-nav.navbar.animate__animated {
-  --animate-duration: 1s;
-  --animate-delay: 0.2s;
+    &.show {
+      opacity: 1;
+    }
+
+    &:hover {
+      transform: scale(1.05) translateY(-3px);
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+    }
+  }
+
+  .images-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    img {
+      width: 240px;
+      height: 240px;
+      object-fit: cover;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      border-radius: 10px;
+      opacity: 1;
+      transform: translateY(20px);
+      transition: all 0.8s ease-out;
+
+      &.animate__fadeInUp {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      }
+    }
+  }
 }

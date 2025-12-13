@@ -1,13 +1,102 @@
-/* Ejemplo: imágenes principales en portafolio */
-.main-content .container .row .col-12 img,
-.main-content .container .row .col-md-6 img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+/*=========================================================*/
+/*================== PORTAFOLIO =========================*/
+/*=========================================================*/
+
+/* PERFUME GRID DETALLE */
+.perfume-grid {
+  display: grid;
+  grid-template-columns: 120px 1fr 180px;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 60px;
+  position: relative;
 }
 
-.main-content .container .row .col-12 img:hover,
-.main-content .container .row .col-md-6 img:hover {
+.perfume-name-side {
+  font-weight: bold;
+  font-size: 20px;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  text-align: center;
+  position: relative;
+  left: 25px;
+}
+
+.perfume-desc {
+  background-color: #ffe4ec;
+  border: 2px solid #ffbcd4;
+  padding: 18px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #444;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 0 8px rgba(255, 150, 180, 0.4);
+  position: relative;
+  right: 20px;
+  line-height: 1.5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.perfume-desc:hover {
+  transform: scale(1.07) translateY(-6px);
+  box-shadow: 0 10px 18px rgba(255, 140, 160, 0.45);
+}
+
+.perfume-desc span {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.perfume-desc .nombre {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.perfume-desc .ml {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.perfume-desc .texto {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.perfume-desc .precio {
+  font-size: 18px;
+  font-weight: 800;
+  margin-top: 10px;
+  color: #222;
+}
+
+/* CARRUSEL */
+.perfume-img { 
+  width: 100%;       
+  max-width: 500px;  
+  height: 230px;     
+  object-fit: cover; 
+  border-radius: 10px;
+}
+
+.perfume-bottle img {
+  width: 100%;
+  max-width: 300px;   
+  height: 180px;      
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.perfume-bottle img:hover {
   transform: scale(1.05);
+}
+
+/* ANIMACIONES */
+.animate__fadeInUp {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: all 0.8s ease-out;
 }

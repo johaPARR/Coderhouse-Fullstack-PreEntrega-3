@@ -1,48 +1,53 @@
-/* _variables.scss */
+// _variables.scss
 
-/* -------------------- FONTS -------------------- */
-$font-primary: 'Irish Grover', cursive;
-$font-secondary: 'Arial', sans-serif;
+// =========================
+// Colores
+// =========================
+$color-primario: #ff9999;         // Nav links
+$color-secundario: #ffc0c0;       // Hover nav links y botones
+$color-fondo-subtitulo: linear-gradient(90deg, #f7c59f, #f3a683);
+$color-texto-subtitulo: #fff;
+$color-fondo-bloques: #ffe6e6;
+$color-perfume-overlay: #C2185B;
+$color-boton: #ffb6c1;
+$color-fondo-servicio: #ffc0cb;
+$color-fondo-testimonio: #f8d7da;
+$color-footer-btn: #ffb6c1;
 
-/* -------------------- COLORS -------------------- */
-$color-white: #ffffff;
-$color-black: #000000;
-$color-pink-light: #ffb6c1;
-$color-pink-dark: #d24da5;
-$color-purple-light: #C23693;
-$color-purple-dark: #5C1946;
-$color-red: #ff0000;
-$color-red-dark: #2C1515;
+// =========================
+// Tipografías y tamaños
+// =========================
+$font-base: Arial, sans-serif;
+$font-size-base: 16px;
+$font-size-subtitulo: 2rem;
+$font-size-nav: 36px;
+$font-weight-bold: bold;
 
-/* -------------------- SIZES -------------------- */
-$h1-size-desktop: 66px;
-$h1-size-laptop: 56px;
-$h1-size-tablet: 44px;
-$h1-size-mobile-large: 38px;
-$h1-size-mobile-medium: 34px;
-$h1-size-mobile-small: 32px;
+// =========================
+// Radios de borde
+// =========================
+$border-radius-base: 8px;
+$border-radius-subtitulo: 12px;
+$border-radius-boton: 8px;
 
-/* -------------------- GRADIENTS -------------------- */
-$gradient-header: linear-gradient(90deg, $color-red-dark 0%, $color-black 100%);
-$gradient-header-hover: linear-gradient(90deg, $color-black 0%, $color-red 100%);
-$gradient-main: linear-gradient(135deg, $color-pink-light, #d3d3d3);
-$gradient-footer: linear-gradient(180deg, $color-purple-light 0%, $color-purple-dark 100%);
-$gradient-footer-hover: linear-gradient(180deg, $color-pink-dark 0%, $color-purple-dark 100%);
+// =========================
+// Transiciones
+// =========================
+$transition-base: all 0.3s ease;
+$transition-hover: transform 0.3s ease, box-shadow 0.3s ease;
 
-/* -------------------- MAPS -------------------- */
-$colors: (
-  "primary": $color-red,
-  "secondary": $color-purple-light,
-  "background": $color-white,
-  "text": $color-black,
-  "accent": $color-pink-dark
-);
+// =========================
+// Tamaños de imágenes
+// =========================
+$perfume-img-max-width: 600px;
+$perfume-bottle-max-width: 250px;
+$servicio-img-height: 320px;
+$side-image-max-width: 150px;
 
-$font-sizes: (
-  "h1-desktop": $h1-size-desktop,
-  "h1-laptop": $h1-size-laptop,
-  "h1-tablet": $h1-size-tablet,
-  "h1-mobile-large": $h1-size-mobile-large,
-  "h1-mobile-medium": $h1-size-mobile-medium,
-  "h1-mobile-small": $h1-size-mobile-small
-);
+// =========================
+// Otros
+// =========================
+$gap-bloques: 30px;
+$line-height-base: 1.5;
+$opacity-inicial: 0;
+$translateY-inicial: 20px;

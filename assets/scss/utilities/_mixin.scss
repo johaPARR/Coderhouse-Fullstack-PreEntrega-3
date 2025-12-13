@@ -1,68 +1,64 @@
-// ----------------- MIXINS -----------------
+/*================== _MIXINS.SCSS ========================*/
 
-// Mixin para gradientes de texto
-@mixin gradient-text($gradient) {
-  background: $gradient;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/*================== TRANSICIONES ========================*/
+@mixin transition($properties, $duration: 0.3s, $timing: ease) {
+  transition: $properties $duration $timing;
 }
 
-// Mixin para gradientes de fondo
-@mixin gradient-bg($gradient) {
-  background: $gradient;
-  transition: transform 0.3s ease, background 0.3s ease;
+/*================== FLEX CENTER ========================*/
+@mixin flex-center($direction: row, $justify: center, $align: center, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
 }
 
-// Mixin para media queries
-@mixin respond-to($breakpoint) {
-  @if $breakpoint == xs { @media (max-width: 320px) { @content; } }
-  @else if $breakpoint == sm { @media (max-width: 480px) and (min-width: 321px) { @content; } }
-  @else if $breakpoint == md { @media (max-width: 768px) and (min-width: 415px) { @content; } }
-  @else if $breakpoint == lg { @media (min-width: 769px) { @content; } }
+/*================== GRID ========================*/
+@mixin grid($columns: 1fr, $gap: 0) {
+  display: grid;
+  grid-template-columns: $columns;
+  gap: $gap;
 }
 
-// ==========================================================
-// NUEVOS MIXINS (NECESARIOS PARA QUE COMPILEN TUS BOTONES)
-// ==========================================================
-
-// Mixin general para botones
-@mixin button($width, $height, $font-size, $line-height) {
-  display: inline-block;
-  width: $width;
-  height: $height;
-  font-size: $font-size;
-  line-height: $line-height;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: transform 0.3s ease, background 0.3s ease;
+/*================== BORDER RADIUS ========================*/
+@mixin border-radius($radius: 8px) {
+  border-radius: $radius;
 }
 
-// Mixin para botón del MENÚ
-@mixin button-menu {
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
-  padding: 5px 10px;
-  display: inline-block;
-  transition: all 0.3s ease;
-  background: linear-gradient(90deg, #ff0000, #000000);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/*================== BOX SHADOW ========================*/
+@mixin box-shadow($x: 0, $y: 4px, $blur: 10px, $color: rgba(0,0,0,0.25)) {
+  box-shadow: $x $y $blur $color;
 }
 
-// Mixin para botón del FOOTER
-@mixin button-footer {
-  display: inline-block;
-  width: 357px;
-  height: 143px;
-  background: linear-gradient(180deg, #C23693 0%, #5C1946 100%);
-  color: #fff;
-  font-size: 32px;
-  text-align: center;
-  line-height: 143px;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: transform 0.3s ease, background 0.3s ease;
+/*================== BUTTON HOVER EFFECT ========================*/
+@mixin button-hover($scale: 1.05) {
+  &:hover {
+    transform: scale($scale);
+  }
 }
 
+/*================== IMAGE HOVER EFFECT ========================*/
+@mixin image-hover($scale: 1.1, $translateY: -6px, $shadow: rgba(0,0,0,0.25)) {
+  &:hover {
+    transform: scale($scale) translateY($translateY);
+    box-shadow: 0 10px 18px $shadow;
+  }
+}
+
+/*================== TEXT SHADOW ========================*/
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,0.2)) {
+  text-shadow: $x $y $blur $color;
+}
+
+/*================== FADE IN UP ANIMATION ========================*/
+@mixin fade-in-up($duration: 0.8s, $distance: 20px) {
+  opacity: 0;
+  transform: translateY($distance);
+  transition: all $duration ease-out;
+
+  &.animate__fadeInUp {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

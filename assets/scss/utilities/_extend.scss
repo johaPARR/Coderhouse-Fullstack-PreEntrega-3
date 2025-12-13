@@ -1,54 +1,130 @@
-// _extend.scss
+/*=========================================================*/
+/*================== _EXTEND.SCSS ========================*/
+/*=========================================================*/
 
-// Reset global
-%reset {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-// Base para el body
-%body-base {
-  font-family: 'Irish Grover', cursive;
-  background-color: #fff;
-  color: #000;
-}
-
-// Base para títulos grandes
-%titulo {
-  font-size: 66px;
-  text-transform: uppercase;
-  background: linear-gradient(90deg, #924545 0%, #2C1515 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin: 0;
-}
-
-// Base para links de menú
-%menu-link {
-  text-decoration: none;
+/* Botones */
+%btn {
+  padding: 12px 25px;
   font-weight: bold;
-  font-size: 18px;
-  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
   display: inline-block;
-  transition: all 0.3s ease;
-  background: linear-gradient(90deg, #ff0000, #000000);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  text-decoration: none;
 }
 
-// Base para botones
-%btn-footer {
-  display: inline-block;
-  width: 357px;
-  height: 143px;
-  background: linear-gradient(180deg, #C23693 0%, #5C1946 100%);
-  color: #fff;
-  font-size: 32px;
-  text-align: center;
-  line-height: 143px;
-  text-decoration: none;
+/* Imagen con efecto hover */
+%img-hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 10px;
-  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
 }
+
+%img-hover-scale:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Tarjeta con sombra y efecto hover */
+%card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+%card:hover {
+  transform: scale(1.08) translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+/* Contenedores con animación inicial */
+%fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+%fade-up.animate__fadeInUp {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Cuadros de información / cajas */
+%info-box {
+  background-color: #ffc0cb;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+%info-box:hover {
+  transform: scale(1.05) translateY(-3px);
+}
+
+/* Contenedores de contenido */
+%info-content {
+  background-color: #ffe6e6;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+%info-content:hover {
+  transform: scale(1.03) translateY(-2px);
+}
+
+/* Textos importantes */
+%titulo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Inputs y textarea */
+%input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+%input:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+}
+
+/* Textos sobre fondos claros */
+%texto-destacado {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Grillas de imágenes flex */
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Animaciones y transiciones generales */
+%transition-default {
+  transition: all 0.3s ease;
+}
+
+/* Colores y fondos comunes */
+%bg-pink {
+  background-color: #ffc0cb;
+}
+%bg-light-pink {
+  background-color: #ffe6e6;
+}
+
+  

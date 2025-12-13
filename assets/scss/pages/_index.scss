@@ -1,0 +1,215 @@
+/*=========================================================*/
+/*================== INDEX ===============================*/
+/*=========================================================*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+/* =========================================================
+  HEADER / MENÚ
+========================================================= */
+header {
+  margin-top: 10px;
+
+  nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px 15px 30px !important;
+
+    .nav-link {
+      font-weight: bold;
+      font-size: 36px;
+      color: #ff9999;
+      transition: all 0.3s ease;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      margin-right: 15px;
+
+      &:hover {
+        color: #ffc0c0;
+        transform: scale(1.1);
+        text-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+      }
+    }
+
+    .navbar-toggler {
+      @media (min-width: 992px) {
+        display: none;
+      }
+    }
+  }
+}
+
+/* =========================================================
+  SUBTÍTULO
+========================================================= */
+.subtitulo {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff !important;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  margin: 10px 0 40px 0;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #f7c59f, #f3a683);
+}
+
+/* =========================================================
+  BLOQUES DE IMÁGENES + TEXTO
+========================================================= */
+.image-block {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+
+  .text-left {
+    width: 250px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5em;
+    color: #333;
+    background-color: #ffe6e6;
+    padding: 15px 12px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    opacity: 0;
+    transition: opacity 1s ease, transform 0.3s ease, box-shadow 0.3s ease;
+
+    &.show {
+      opacity: 1;
+    }
+
+    &:hover {
+      transform: scale(1.05) translateY(-3px);
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+    }
+  }
+
+  .images-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    img {
+      width: 240px;
+      height: 240px;
+      object-fit: cover;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      border-radius: 10px;
+      opacity: 1;
+      transform: translateY(20px);
+      transition: all 0.8s ease-out;
+
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      }
+
+      &.animate__fadeInUp {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &.animate__fadeInUp {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+  PERFUME DESTACADO
+========================================================= */
+.perfume-section {
+  position: relative;
+  text-align: center;
+  margin: 40px 0;
+
+  .perfume-img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    transition: transform 0.8s ease, filter 0.6s ease;
+    transform-origin: center;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.12) translateY(-6px);
+      filter: drop-shadow(0 8px 18px rgba(0,0,0,0.35));
+    }
+  }
+
+  .perfume-overlay {
+    p {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #C2185B;
+      text-align: center;
+      margin: 30px 0 15px 0;
+      line-height: 1.6;
+    }
+  }
+
+  .perfume-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ffb6c1;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.06);
+    }
+  }
+}
+
+/* =========================================================
+  GRILLA DE VALORES EN MOVIMIENTO
+========================================================= */
+.valores-grid {
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  padding: 10px 0;
+  position: relative;
+
+  .valores-grid-inner {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: slide-left 120s linear infinite;
+
+    .valor {
+      font-size: 20px;
+      font-weight: bold;
+      background: #ffe6ea;
+      padding: 10px 15px;
+      border-radius: 10px;
+      white-space: nowrap;
+    }
+  }
+}
+
+@keyframes slide-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

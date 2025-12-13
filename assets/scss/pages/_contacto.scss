@@ -1,6 +1,158 @@
-/* Estilos específicos para contacto.html */
-main h2,
-main p,
-main .cartel {
+/*=========================================================*/
+/*================== CONTACTO ============================*/
+/*=========================================================*/
+
+/* CUADRO DE TITULOS */
+.info-box {
+  background-color: #ffc0cb;
+  border-radius: 10px;
   text-align: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.info-box h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.info-box:hover {
+  transform: scale(1.05) translateY(-3px);
+}
+
+/* Información de la empresa en cuadro */
+.info-content {
+  background-color: #ffe6e6;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.info-content:hover {
+  transform: scale(1.03) translateY(-2px);
+}
+
+/* Ajuste de formulario */
+.contacto-form {
+  gap: 10px;
+  padding: 10px !important;
+}
+
+.contacto-form .form-group {
+  margin-bottom: 10px;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contacto-form input:hover,
+.contacto-form textarea:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+}
+
+/* Botón */
+.contacto-btn {
+  background-color: #ffb6c1;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.contacto-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Imagen de flores más cerca del formulario */
+.form-bottom-image img {
+  margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.8s ease, box-shadow 0.6s ease;
+}
+
+.form-bottom-image img:hover {
+  transform: scale(1.08) translateY(-6px);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.25);
+}
+
+/* ========= DOS IMÁGENES GRANDES DEBAJO DEL FORMULARIO Y CUADRO DE DIRECCIÓN ========= */
+.info-image-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.info-image {
+  width: 300px;   /* Tamaño original respetado */
+  height: 300px;  /* Tamaño original respetado */
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.8s ease, box-shadow 0.6s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.info-image:hover {
+  transform: scale(1.12) translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+
+.info-image.animate__fadeInUp {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========= CINCO IMÁGENES ABAJO ========= */
+
+.contact-images {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.contact-images img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+
+  /* Animación inicial: invisibles y un poco más pequeñas */
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  transition: transform 0.5s ease, opacity 0.8s ease-out;
+}
+
+/* Animación al entrar en viewport */
+.contact-images img.animate__fadeInUp {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Hover: movimiento hacia arriba + zoom */
+.contact-images img:hover {
+  transform: translateY(-10px) scale(1.15);
+  transition: transform 0.5s ease;
 }

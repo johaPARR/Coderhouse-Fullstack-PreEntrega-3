@@ -1,21 +1,102 @@
-// ===================== FOOTER =====================
-
-// Importamos mixins y extends
-@use '../utilities/mixin' as *;
-@use '../utilities/extend' as *;
-
+/* =========================================================
+  FOOTER
+========================================================= */
 footer {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  padding: 40px 0;
+  gap: 20px;
+  padding: 20px 0;
   flex-wrap: wrap;
-}
+  margin-top: 60px;
 
-footer p,
-footer span,
-footer li {
-  font-size: 1.3125rem;
-  line-height: 1.5;
-  color: #fff;
+  a.footer-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 50px;
+    padding: 5px 20px;
+    background-color: #ffb6c1; // cuadro rosa
+    color: #fff;
+    border: 2px solid #d4d4d4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  // ===============QUERIES RESPONSIVE================================
+  @media (max-width: 320px) { 
+    a.footer-btn { 
+      width: 100%; 
+      font-size: 20px; 
+      line-height: 45px; 
+      height: auto; 
+      padding: 10px 0; 
+    } 
+  }
+
+  @media (min-width: 321px) and (max-width: 375px) { 
+    a.footer-btn { 
+      width: 95%; 
+      font-size: 20px; 
+      line-height: 48px; 
+      height: auto; 
+      padding: 10px 0; 
+    } 
+  }
+
+  @media (min-width: 376px) and (max-width: 414px) { 
+    a.footer-btn { 
+      width: 90%; 
+      font-size: 20px; 
+      line-height: 50px; 
+      height: auto; 
+      padding: 10px 0; 
+    } 
+  }
+
+  @media (min-width: 415px) and (max-width: 480px) {
+    a.footer-btn { 
+      width: 90%; 
+      font-size: 20px; 
+      line-height: 60px; 
+      height: auto; 
+      padding: 10px 0; 
+    }
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) { 
+    a.footer-btn { 
+      width: 85%; 
+      font-size: 20px; 
+      line-height: 55px; 
+      height: auto; 
+      padding: 10px 0; 
+    } 
+  }
+
+  @media (min-width: 769px) and (max-width: 992px) { 
+    a.footer-btn { 
+      width: 90%; 
+      font-size: 20px; 
+      line-height: 60px; 
+      height: auto; 
+      padding: 10px 0; 
+    } 
+  }
+
+  @media (min-width: 992px) { 
+    a.footer-btn { 
+      width: auto; 
+      font-size: 20px; 
+      line-height: normal; 
+      padding: 5px 20px; 
+    } 
+  }
 }

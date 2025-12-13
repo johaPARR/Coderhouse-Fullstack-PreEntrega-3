@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8"><!--Caracteres codificados-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Diseño responsivo-->
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css"><!--Enlace externo de Css-->
-    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Italianno&display=swap" rel="stylesheet"><!--Enlace de Fuentes-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Araperful</title>
+  <!-- SEO -->
+  <title>Araperful - Perfuma tu alma con estilo y elegancia</title>
+  <meta name="description" content="Araperful: Lleva tu esencia a todas partes con perfumes exclusivos. Descubre nuestro portafolio, servicios y tienda online.">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Italianno&display=swap" rel="stylesheet">
+
+  <!-- Animaciones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <body>
-  <header class="header">
-    <!-- Título principal arriba -->
-    <h1 class="titulo">Araperful</h1>
 
-    <!-- Menú hamburguesa -->
-    <nav class="navbar navbar-dark bg-dark w-100 animate__animated animate__fadeInDown">
-      <div class="container-fluid d-flex justify-content-end align-items-center">
-        <!-- Botón hamburguesa a la derecha -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<!-- ==================== HEADER ==================== -->
+<header>
+  <nav class="navbar navbar-expand-lg header-nav animate__animated animate__fadeInDown">
+    <div class="container d-flex justify-content-center align-items-center">
+      <div class="d-flex align-items-center gap-4">
+
+        <h1 class="titulo mb-0">Araperful</h1>
+
+        <!-- Menú hamburguesa -->
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Mostrar menú">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Links del menú colapsado -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <!-- Navegación -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav gap-3">
             <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
             <li class="nav-item"><a class="nav-link" href="pages/portafolio.html">Portafolio</a></li>
             <li class="nav-item"><a class="nav-link" href="pages/servicios.html">Servicios</a></li>
@@ -36,67 +50,171 @@
             <li class="nav-item"><a class="nav-link" href="pages/contacto.html">Contacto</a></li>
           </ul>
         </div>
-      </div>
-    </nav>
-  </header>
 
-  <main class="main-content main-gradient">
-    <div class="container py-4"><!--Imagenes principales en Body de Monica Belluci-->
-      <div class="row g-4">
-        <div class="col-12 col-md-6">
-          <img src="assets/img/Monica Belluci/monica1.jpg" alt="Monica Bellucci imagen 1" class="img-fluid img-principal">
-        </div>
-        <div class="col-12 col-md-6">
-          <img src="assets/img/Monica Belluci/Monica2.jpg" alt="Monica Bellucci imagen 2" class="img-fluid img-principal">
-        </div>
-        <div class="col-12 col-md-6">
-          <img src="assets/img/Monica Belluci/Monica3.jpg" alt="Monica Bellucci imagen 3" class="img-fluid img-principal">
-        </div>
-
-        <div class="col-12 col-md-6"><!--Formulario para que el cliente cargue-->
-          <form class="form-responsive animate__animated animate__fadeIn">
-            <div class="form-row">
-              <div class="form-group col-12 col-sm-6">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" class="form-control">
-              </div>
-              <div class="form-group col-12 col-sm-6">
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido" class="form-control">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-12 col-sm-6">
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" class="form-control">
-              </div>
-              <div class="form-group col-12 col-sm-6">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" class="form-control">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-12">
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" class="form-control"></textarea>
-              </div>
-            </div>
-          </form>
-        </div>
-
-        <div class="col-12 col-md-6">
-          <img src="assets/img/Monica Belluci/Monica4.jpg" alt="Monica Bellucci imagen 4" class="img-fluid img-principal">
-        </div>
       </div>
     </div>
-  </main>
+  </nav>
+</header>
 
-  <footer class="footer d-flex flex-wrap justify-content-center gap-3 py-4"><!--Los 3 Botones de Footer(Contacto y redes sociales)-->
-    <a href="https://www.instagram.com/araperful/" target="_blank" class="footer-btn">Instagram</a>
-    <a href="https://araperful.empretienda.com.ar/" target="_blank" class="footer-btn">Tienda Online</a>
-    <a href="pages/contacto.html" class="footer-btn">Contacto</a>
-  </footer>
+<!-- ==================== MAIN ==================== -->
+<main class="main-content main-gradient container py-4">
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><!--Enlace de Boostrap-->
+  <!-- Subtítulo -->
+  <section aria-labelledby="subtitulo-principal">
+    <h2 id="subtitulo-principal" class="subtitulo text-center mb-5">
+      Perfuma tu alma y lleva tu esencia a todas partes
+    </h2>
+  </section>
+
+  <!-- ==================== BLOQUES DE IMÁGENES ==================== -->
+  <section class="image-block" aria-label="Galería Monica Bellucci 1">
+    <p class="text-left animate__animated" style="animation-delay: 0.2s;">
+      El perfume de tu piel grabó en mi memoria cada encuentro
+    </p>
+    <div class="images-group">
+      <img src="assets/img/Monica Belluci/monica1.webp" alt="Monica Bellucci pose 1">
+      <img src="assets/img/Monica Belluci/monica2.webp" alt="Monica Bellucci pose 2">
+      <img src="assets/img/Monica Belluci/monica3.webp" alt="Monica Bellucci pose 3">
+    </div>
+  </section>
+
+  <section class="image-block" aria-label="Galería Monica Bellucci 2">
+    <p class="text-left animate__animated" style="animation-delay: 0.4s;">
+      La luz es nítida cuando te siento cerca
+    </p>
+    <div class="images-group">
+      <img src="assets/img/Monica Belluci/monica4.webp" alt="Monica Bellucci pose 4">
+      <img src="assets/img/Monica Belluci/monica5.webp" alt="Monica Bellucci pose 5">
+      <img src="assets/img/Monica Belluci/monica6.webp" alt="Monica Bellucci pose 6">
+    </div>
+  </section>
+
+  <section class="image-block" aria-label="Galería Monica Bellucci 3">
+    <p class="text-left animate__animated" style="animation-delay: 0.6s;">
+      Ella es una princesa, es la reina del amor
+    </p>
+    <div class="images-group">
+      <img src="assets/img/Monica Belluci/monica7.webp" alt="Monica Bellucci pose 7">
+      <img src="assets/img/Monica Belluci/monica8.webp" alt="Monica Bellucci pose 8">
+      <img src="assets/img/Monica Belluci/monica9.webp" alt="Monica Bellucci pose 9">
+    </div>
+  </section>
+
+  <!-- ==================== PERFUME DESTACADO ==================== -->
+  <section class="perfume-section" aria-label="Perfume artesanal destacado">
+    <img src="assets/img/Monica Belluci/perfume.webp" alt="Botella de perfume artesanal" class="perfume-img">
+    <div class="perfume-overlay">
+      <p class="perfume text-overlay">
+        Nuestros perfumes artesanales y orgánicos son perfectos para cuidar tu salud
+      </p>
+      <a href="#" class="perfume-btn">Entra a verlos!</a>
+    </div>
+  </section>
+
+  <!-- ==================== VALORES ==================== -->
+  <section class="valores-section py-5" aria-labelledby="titulo-valores">
+    <h2 id="titulo-valores" class="visually-hidden">Valores de la marca</h2>
+    <div class="valores-grid">
+      <div class="valores-grid-inner">
+        <div class="valor">Artesanal</div>
+        <div class="valor">Ecológico</div>
+        <div class="valor">Orgánico</div>
+        <div class="valor">Genuino</div>
+        <div class="valor">Atemporal</div>
+        <div class="valor">Elegante</div>
+        <div class="valor">Artesanal</div>
+        <div class="valor">Ecológico</div>
+        <div class="valor">Orgánico</div>
+        <div class="valor">Genuino</div>
+        <div class="valor">Atemporal</div>
+        <div class="valor">Elegante</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PERFUMES DESTACADOS ==================== -->
+  <section class="perfumes-section py-5" aria-labelledby="titulo-perfumes">
+    <h2 id="titulo-perfumes" class="visually-hidden">Perfumes destacados</h2>
+
+    <div class="grid-container perfumes-grid">
+
+      <article class="perfume-bottle-container">
+        <div class="perfume-bottle">
+          <img src="assets/img/Bad boys/Bad4.webp" alt="Perfume Bad Boys">
+        </div>
+        <h3 class="perfume-title">Bad Boys</h3>
+        <p class="perfume-text"><strong>Sumérgete en un viaje hacia la noche donde todas se rendirán a tus pies por lo atrevido y fugaz que eres.</strong></p>
+      </article>
+
+      <article class="perfume-bottle-container">
+        <div class="perfume-bottle">
+          <img src="assets/img/Blue seduccion/Blue3.webp" alt="Perfume Blue Seducción">
+        </div>
+        <h3 class="perfume-title">Blue Seducción</h3>
+        <p class="perfume-text"><strong>Eres único con tu naturaleza salvaje e impactante dureza del mar.</strong></p>
+      </article>
+
+      <article class="perfume-bottle-container">
+        <div class="perfume-bottle">
+          <img src="assets/img/Olimpea/olimpea3.webp" alt="Perfume Olimpea">
+        </div>
+        <h3 class="perfume-title">Olimpea</h3>
+        <p class="perfume-text"><strong>La princesa que todo lo obtiene porque es tan dulce como una flor.</strong></p>
+      </article>
+
+      <article class="perfume-bottle-container">
+        <div class="perfume-bottle">
+          <img src="assets/img/YVES/Yves3.webp" alt="Perfume Yves Saint Laurent">
+        </div>
+        <h3 class="perfume-title">Yves Saint Laurent</h3>
+        <p class="perfume-text"><strong>Eres la autoridad que toda mujer quiere, en toda situación la proteges y no la dejas escapar.</strong></p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer d-flex flex-wrap justify-content-center gap-3 py-4">
+  <a href="https://www.instagram.com/araperful/" target="_blank" class="footer-btn"><strong>Instagram</strong></a>
+  <a href="https://araperful.empretienda.com.ar/" target="_blank" class="footer-btn"><strong>Tienda Online</strong></a>
+  <a href="pages/contacto.html" class="footer-btn"><strong>Contacto</strong></a>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Animación textos -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const texts = document.querySelectorAll('.text-left');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+        }
+      });
+    }, { threshold: 0.1 });
+    texts.forEach(text => observer.observe(text));
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const blocks = document.querySelectorAll('.image-block');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('animate__fadeInUp');
+        }
+      });
+    }, { threshold: 0.1 });
+    blocks.forEach(block => observer.observe(block));
+  });
+</script>
+
 </body>
 </html>
+
+

@@ -1,158 +1,340 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Italianno&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- SEO -->
   <title>Araperful - Portafolio</title>
+  <meta name="description" content="Araperful: Descubrí nuestro portafolio de perfumes exclusivos.">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Italianno&display=swap" rel="stylesheet">
+
+  <!-- Animaciones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-  <!-- Título principal arriba -->
-  <h1 class="titulo">Araperful</h1>
+<!-- ==================== HEADER ==================== -->
+<header>
+  <nav class="navbar navbar-expand-lg header-nav animate__animated animate__fadeInDown">
+    <div class="container d-flex justify-content-center align-items-center">
+      <div class="d-flex align-items-center gap-4">
+        <h1 class="titulo mb-0">Araperful</h1>
 
-  <!-- Menú hamburguesa con animación -->
-  <nav class="navbar navbar-dark bg-dark w-100 animate__animated animate__fadeInDown">
-    <div class="container-fluid d-flex justify-content-end align-items-center">
-      <!-- Botón hamburguesa a la derecha -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <!-- Menú hamburguesa -->
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Alternar navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <!-- Links del menú colapsado -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li> <!-- Subir a la raíz -->
-          <li class="nav-item"><a class="nav-link" href="portafolio.html">Portafolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="clientes.html">Clientes</a></li>
-          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-        </ul>
+        <!-- Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav gap-3">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="portafolio.html">Portafolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="clientes.html">Clientes</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
 </header>
 
+<!-- ==================== MAIN ==================== -->
+<main class="main-content container py-4">
 
+  <h2 class="subtitulo text-center mb-5">PORTAFOLIO DE PERFUMES</h2>
 
+  <!-- ==================== SECCIÓN PERFUMES ==================== -->
+  <section class="perfumes-section" aria-label="Galería de perfumes">
 
+    <!-- ========================================================= -->
+    <!-- =====================  OLIMPEA  ========================= -->
+    <!-- ========================================================= -->
+    <article class="perfume-grid mb-5">
+      <div class="perfume-name-side">OLIMPEA</div>
 
-  <!-- MAIN -->
-  <main class="portafolio-main container py-4">
-    <h2>Portafolio</h2><!--Subtitulo-->
-    <p>Descubrí nuestras fragancias artesanales únicas, creadas con dedicación y detalle. Cada perfume cuenta una historia.</p>
-
-    <section class="galeria-perfumes"><!--Galeria de perfumes-->
-      <div class="row g-4">
-        <!-- Olimpea -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100"><!--Imagenes de perfume, descripcion y precio-->
-            <img src="../assets/img/Olimpea/olimpea1.jpg" class="card-img-top" alt="Olimpea imagen 1">
-            <img src="../assets/img/Olimpea/Olimpea2.jpg" class="card-img-top" alt="Olimpea imagen 2">
-            <img src="../assets/img/Olimpea/olimpea3.webp" class="card-img-top" alt="Olimpea imagen 3">
-            <img src="../assets/img/Olimpea/olimpea4.jpg" class="card-img-top" alt="Olimpea imagen 4">
-            <div class="card-body">
-              <h3 class="card-title">Olimpea - Paco Rabanne (60ml)</h3>
-              <h4 class="precio">$36.472</h4>
-              <p>Más intensa que nunca, ella es una reina. Notas de fondo: ámbar blanco y ámbar gris.</p>
-            </div>
+      <div id="carouselOlimpea" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../assets/img/Olimpea/olimpea1.webp" class="d-block w-100 perfume-img" alt="Perfume Olympea imagen 1">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/img/Olimpea/olimpea2.webp" class="d-block w-100 perfume-img" alt="Perfume Olympea imagen 2">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/img/Olimpea/olimpea3.webp" class="d-block w-100 perfume-img" alt="Perfume Olympea imagen 3">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/img/Olimpea/olimpea4.webp" class="d-block w-100 perfume-img" alt="Perfume Olympea imagen 4">
           </div>
         </div>
-
-        <!-- La Nuit Tresor -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100">
-            <img src="../assets/img/La Nuit tressor/Lanuit1.jpg" class="card-img-top" alt="La Nuit tressor imagen 1">
-            <img src="../assets/img/La Nuit tressor/Lanuit2.jpg" class="card-img-top" alt="La Nuit tressor imagen 2">
-            <img src="../assets/img/La Nuit tressor/Lanuit3.jpg" class="card-img-top" alt="La Nuit tressor imagen 3">
-            <img src="../assets/img/La Nuit tressor/Lanuit4.jpg" class="card-img-top" alt="La Nuit tressor imagen 4">
-            <div class="card-body">
-              <h3 class="card-title">La Nuit Tresor - Lancome (60ml)</h3>
-              <h4 class="precio">$36.472</h4>
-              <p>Ella es muy apasionada. Notas de salida: pera, naranja, tangerina. Notas de corazón: fresa, orquídea, rosa negra y maracuyá.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Good Girl -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100">
-            <img src="../assets/img/Good Girl/good1.jpg" class="card-img-top" alt="Good Girl imagen 1">
-            <img src="../assets/img/Good Girl/good2.webp" class="card-img-top" alt="Good Girl imagen 2">
-            <img src="../assets/img/Good Girl/good3.jpg" class="card-img-top" alt="Good Girl imagen 3">
-            <img src="../assets/img/Good Girl/good4.webp" class="card-img-top" alt="Good Girl imagen 4">
-            <div class="card-body">
-              <h3 class="card-title">Good Girl - Carolina Herrera (60ml)</h3>
-              <h4 class="precio">$36.472</h4>
-              <p>Dulce, imponente y seductora. Notas de salida: almendra, café, bergamota. Fondo: haba tonka, cacao, vainilla.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Blue Seducción -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100">
-            <img src="../assets/img/Blue seduccion/Blue1.jpg" class="card-img-top" alt="Blue seduccion imagen 1">
-            <img src="../assets/img/Blue seduccion/blue2.jpg" class="card-img-top" alt="Blue seduccion imagen 2">
-            <img src="../assets/img/Blue seduccion/Blue3.webp" class="card-img-top" alt="Blue seduccion imagen 3">
-            <img src="../assets/img/Blue seduccion/Blue4.jpg" class="card-img-top" alt="Blue seduccion imagen 4">
-            <div class="card-body">
-              <h3 class="card-title">Blue Seducción - Antonio Banderas (60ml)</h3>
-              <h4 class="precio">$36.472</h4>
-              <p>Hombre seductor, viril. Notas de salida: bergamota, grosella negra. Corazón: cardamomo, nuez moscada.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bad Boys -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100">
-            <img src="../assets/img/Bad boys/Bad1.webp" class="card-img-top" alt="Bad boys imagen 1">
-            <img src="../assets/img/Bad boys/Bad2.webp" class="card-img-top" alt="Bad boys imagen 2">
-            <img src="../assets/img/Bad boys/Bad3.jpg" class="card-img-top" alt="Bad boys imagen 3">
-            <img src="../assets/img/Bad boys/Bad4.webp" class="card-img-top" alt="Bad boys imagen 4">
-            <div class="card-body">
-              <h3 class="card-title">Bad Boys - Carolina Herrera (60ml)</h3>
-              <h4 class="precio">$36.472</h4>
-              <p>Calidez y audacia. Notas de salida: bergamota, pimienta negra y blanca. Corazón: cedro y salvia.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Yves Saint Laurent -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100">
-            <img src="../assets/img/YVES/yves1.jpg" class="card-img-top" alt="Yves Saint Laurent imagen 1">
-            <img src="../assets/img/YVES/yves2.jpg" class="card-img-top" alt="Yves Saint Laurent imagen 2">
-            <img src="../assets/img/YVES/yves3.webp" class="card-img-top" alt="Yves Saint Laurent imagen 3">
-            <img src="../assets/img/YVES/yves4.jpg" class="card-img-top" alt="Yves Saint Laurent imagen 4">
-            <div class="card-body">
-              <h3 class="card-title">Yves Saint Laurent (60ml)</h3>
-              <h4 class="precio">$36.472</h4>
-              <p>Notas de salida: manzana y jengibre. Notas de corazón: salvia y geranio.</p>
-            </div>
-          </div>
-        </div>
-
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselOlimpea" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselOlimpea" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
       </div>
-    </section>
-  </main>
 
-  <!-- FOOTER -->
-  <footer class="footer d-flex flex-wrap justify-content-center gap-3 py-4"><!--Botones de Footer-->
-    <a href="https://www.instagram.com/araperful/" target="_blank" class="footer-btn">Instagram</a>
-    <a href="https://araperful.empretienda.com.ar/" target="_blank" class="footer-btn">Tienda Online</a>
-    <a href="contacto.html" class="footer-btn">Contacto</a>
-  </footer>
+      <div class="perfume-desc">
+        OLIMPEA <br>
+        60 ML <br>
+        Precio: $36.500
+      </div>
+    </article>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><!--Boostrap-->
+    <!-- ========================================================= -->
+    <!-- ====================  BAD BOYS  ========================== -->
+    <!-- ========================================================= -->
+    <article class="perfume-grid mb-5">
+      <div class="perfume-name-side">BAD BOYS</div>
+
+      <div id="carouselBadBoys" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../assets/img/Bad boys/Bad1.webp" class="d-block w-100 perfume-img" alt="Perfume Bad Boys imagen 1">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/img/Bad boys/Bad2.webp" class="d-block w-100 perfume-img" alt="Perfume Bad Boys imagen 2">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/img/Bad boys/hombresintiendo3.webp" class="d-block w-100 perfume-img" alt="Perfume Bad Boys imagen 3">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/img/Bad boys/Bad4.webp" class="d-block w-100 perfume-img" alt="Perfume Bad Boys imagen 4">
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBadBoys" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselBadBoys" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+
+      <div class="perfume-desc">
+        BAD BOYS <br>
+        60 ML <br>
+        Precio: $36.500
+      </div>
+    </article>
+
+    <!-- ========================================================= -->
+    <!-- ================= BLUE SEDUCCIÓN ======================== -->
+    <!-- ========================================================= -->
+    <article class="perfume-grid mb-5">
+      <div class="perfume-name-side">BLUE SEDUCCIÓN</div>
+
+      <div id="carouselBlueSeduccion" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../assets/img/Blue seduccion/Blue1.webp" class="d-block w-100 perfume-img" alt="Blue Seducción imagen 1">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/img/Blue seduccion/blue2.webp" class="d-block w-100 perfume-img" alt="Blue Seducción imagen 2">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/img/Blue seduccion/Blue3.webp" class="d-block w-100 perfume-img" alt="Blue Seducción imagen 3">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/img/Blue seduccion/Blue4.webp" class="d-block w-100 perfume-img" alt="Blue Seducción imagen 4">
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBlueSeduccion" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselBlueSeduccion" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+
+      <div class="perfume-desc">
+        BLUE SEDUCCIÓN <br>
+        60 ML <br>
+        Precio: $36.500
+      </div>
+    </article>
+
+    <!-- ========================================================= -->
+    <!-- ==================== GOOD GIRL ========================== -->
+    <!-- ========================================================= -->
+    <article class="perfume-grid mb-5">
+      <div class="perfume-name-side">GOOD GIRL</div>
+
+      <div id="carouselGoodGirl" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <img src="../assets/img/Good Girl/good1.webp" class="d-block w-100 perfume-img" alt="Good Girl imagen 1">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/img/Good Girl/good2.webp" class="d-block w-100 perfume-img" alt="Good Girl imagen 2">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/img/Good Girl/good3.webp" class="d-block w-100 perfume-img" alt="Good Girl imagen 3">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/img/Good Girl/good4.webp" class="d-block w-100 perfume-img" alt="Good Girl imagen 4">
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselGoodGirl" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselGoodGirl" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+
+      <div class="perfume-desc">
+        GOOD GIRL <br>
+        60 ML <br>
+        Precio: $36.500
+      </div>
+    </article>
+
+    <!-- ========================================================= -->
+    <!-- =================== LA NUIT TRESOR ====================== -->
+    <!-- ========================================================= -->
+    <article class="perfume-grid mb-5">
+      <div class="perfume-name-side">LA NUIT TRESOR</div>
+
+      <div id="carouselLaNuit" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <img src="../assets/img/La Nuit tressor/Lanuit1.webp" class="d-block w-100 perfume-img" alt="La Nuit Tresor imagen 1">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/img/La Nuit tressor/Lanuit2.webp" class="d-block w-100 perfume-img" alt="La Nuit Tresor imagen 2">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/img/La Nuit tressor/Lanuit3.webp" class="d-block w-100 perfume-img" alt="La Nuit Tresor imagen 3">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/img/La Nuit tressor/Lanuit4.webp" class="d-block w-100 perfume-img" alt="La Nuit Tresor imagen 4">
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselLaNuit" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselLaNuit" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+
+      <div class="perfume-desc">
+        LA NUIT TRESOR <br>
+        60 ML <br>
+        Precio: $36.500
+      </div>
+    </article>
+
+    <!-- ========================================================= -->
+    <!-- =================== YVES SAINT LAURENT ================== -->
+    <!-- ========================================================= -->
+    <article class="perfume-grid mb-5">
+      <div class="perfume-name-side">YVES SAINT LAURENT</div>
+
+      <div id="carouselYVS" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <img src="../assets/img/YVES/yves1.webp" class="d-block w-100 perfume-img" alt="Yves Saint Laurent imagen 1">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/img/YVES/yves2.webp" class="d-block w-100 perfume-img" alt="Yves Saint Laurent imagen 2">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/img/YVES/yves3.webp" class="d-block w-100 perfume-img" alt="Yves Saint Laurent imagen 3">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/img/YVES/yves4.webp" class="d-block w-100 perfume-img" alt="Yves Saint Laurent imagen 4">
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselYVS" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselYVS" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+
+      <div class="perfume-desc">
+        YVES SAINT LAURENT <br>
+        60 ML <br>
+        Precio: $36.500
+      </div>
+    </article>
+
+  </section>
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer d-flex flex-wrap justify-content-center gap-3 py-4">
+  <a href="https://www.instagram.com/araperful/" target="_blank" class="footer-btn">
+    <strong>Instagram</strong>
+  </a>
+  <a href="https://araperful.empretienda.com.ar/" target="_blank" class="footer-btn">
+    <strong>Tienda Online</strong>
+  </a>
+  <a href="contacto.html" class="footer-btn">
+    <strong>Contacto</strong>
+  </a>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Animación texto -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const texts = document.querySelectorAll('.text-left');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+        }
+      });
+    }, { threshold: 0.1 });
+    texts.forEach(text => observer.observe(text));
+  });
+</script>
+
 </body>
 </html>

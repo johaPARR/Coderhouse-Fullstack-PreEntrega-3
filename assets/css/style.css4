@@ -1,0 +1,1891 @@
+@charset "UTF-8";
+/*=========================================================*/
+/*================== BASE / GENERALES ====================*/
+/*=========================================================*/
+/* Reset y estilos base */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+/* =========================================================
+  HEADER / MENÚ
+========================================================= */
+header nav.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 30px 15px 30px !important; /* Consolidado */
+}
+
+header {
+  margin-top: 10px;
+}
+
+header nav.navbar .nav-link {
+  font-weight: bold;
+  font-size: 36px;
+  color: #ff9999;
+  transition: all 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-right: 15px;
+}
+
+header nav.navbar .nav-link:hover {
+  color: #ffc0c0;
+  transform: scale(1.1);
+  text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+/* Ocultar hamburguesa en escritorio */
+@media (min-width: 992px) {
+  .navbar-toggler {
+    display: none;
+  }
+}
+/* =========================================================
+  SUBTÍTULO
+========================================================= */
+.subtitulo {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin: 10px 0 40px 0;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #f7c59f, #f3a683);
+}
+
+/* =========================================================
+  BLOQUES DE IMÁGENES + TEXTO
+========================================================= */
+.image-block {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  opacity: 0; /* invisible solo al inicio */
+  transform: translateY(20px); /* posición inicial abajo */
+  transition: all 0.8s ease-out;
+}
+
+.image-block .text-left {
+  width: 250px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.5em;
+  color: #333;
+  background-color: #ffe6e6;
+  padding: 15px 12px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 1s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-block .text-left.show {
+  opacity: 1;
+}
+
+.image-block .text-left:hover {
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-block .images-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.image-block .images-group img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 10px;
+  opacity: 1;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.image-block .images-group img.animate__fadeInUp {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.image-block.animate__fadeInUp {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+  PERFUME DESTACADO
+========================================================= */
+.perfume-section {
+  position: relative;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.perfume-img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  transition: transform 0.8s ease, filter 0.6s ease;
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.perfume-img:hover {
+  transform: scale(1.12) translateY(-6px);
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
+}
+
+.perfume-overlay p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #C2185B;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.perfume-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #ffb6c1;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.perfume-btn:hover {
+  transform: scale(1.06);
+}
+
+/* =========================================================
+  GRILLA DE VALORES EN MOVIMIENTO
+========================================================= */
+.valores-grid {
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  padding: 10px 0;
+  position: relative;
+}
+
+.valores-grid-inner {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: slide-left 120s linear infinite;
+}
+
+.valor {
+  font-size: 20px;
+  font-weight: bold;
+  background: #ffe6ea;
+  padding: 10px 15px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* =========================================================
+  FOOTER
+========================================================= */
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+footer a.footer-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 50px;
+  padding: 5px 20px;
+  background-color: #ffb6c1;
+  color: #fff;
+  border: 2px solid #d4d4d4;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+footer a.footer-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ===============QUERIES RESPONSIVE================================ */
+@media (max-width: 320px) {
+  footer a.footer-btn {
+    width: 100%;
+    font-size: 20px;
+    line-height: 45px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+  footer a.footer-btn {
+    width: 95%;
+    font-size: 20px;
+    line-height: 48px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 376px) and (max-width: 414px) {
+  footer a.footer-btn {
+    width: 90%;
+    font-size: 20px;
+    line-height: 50px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 415px) and (max-width: 480px) {
+  footer a.footer-btn {
+    width: 90%;
+    font-size: 20px;
+    line-height: 60px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  footer a.footer-btn {
+    width: 85%;
+    font-size: 20px;
+    line-height: 55px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  footer a.footer-btn {
+    width: 90%;
+    font-size: 20px;
+    line-height: 60px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 992px) {
+  footer a.footer-btn {
+    width: auto;
+    font-size: 20px;
+    line-height: normal;
+    padding: 5px 20px;
+  }
+}
+/*=========================================================*/
+/*================== QUERIES RESPONSIVE ==================*/
+/*=========================================================*/
+@media (max-width: 320px) {
+  footer a.footer-btn {
+    width: 100%;
+    font-size: 20px;
+    line-height: 45px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+  footer a.footer-btn {
+    width: 95%;
+    font-size: 20px;
+    line-height: 48px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 376px) and (max-width: 414px) {
+  footer a.footer-btn {
+    width: 90%;
+    font-size: 20px;
+    line-height: 50px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 415px) and (max-width: 480px) {
+  footer a.footer-btn {
+    width: 90%;
+    font-size: 20px;
+    line-height: 60px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  footer a.footer-btn {
+    width: 85%;
+    font-size: 20px;
+    line-height: 55px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  footer a.footer-btn {
+    width: 90%;
+    font-size: 20px;
+    line-height: 60px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 992px) {
+  footer a.footer-btn {
+    width: auto;
+    font-size: 20px;
+    line-height: normal;
+    padding: 5px 20px;
+  }
+}
+/*================== _MIXINS.SCSS ========================*/
+/*================== TRANSICIONES ========================*/
+/*================== FLEX CENTER ========================*/
+/*================== GRID ========================*/
+/*================== BORDER RADIUS ========================*/
+/*================== BOX SHADOW ========================*/
+/*================== BUTTON HOVER EFFECT ========================*/
+/*================== IMAGE HOVER EFFECT ========================*/
+/*================== TEXT SHADOW ========================*/
+/*================== FADE IN UP ANIMATION ========================*/
+/*=========================================================*/
+/*================== _EXTEND.SCSS ========================*/
+/*=========================================================*/
+/* Botones */
+/* Imagen con efecto hover */
+/* Tarjeta con sombra y efecto hover */
+/* Contenedores con animación inicial */
+/* Cuadros de información / cajas */
+/* Contenedores de contenido */
+/* Textos importantes */
+/* Inputs y textarea */
+/* Textos sobre fondos claros */
+/* Grillas de imágenes flex */
+/* Animaciones y transiciones generales */
+/* Colores y fondos comunes */
+/*================== PARTIAL: _maps.scss =================*/
+/*=========================================================
+  BLOQUES DE IMÁGENES + TEXTO
+=========================================================*/
+.image-block {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.image-block.animate__fadeInUp {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.images-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.images-group img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 10px;
+  opacity: 1;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.images-group img.animate__fadeInUp {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.images-group img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.text-left {
+  width: 250px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.5em;
+  color: #333;
+  background-color: #ffe6e6;
+  padding: 15px 12px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 1s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-left.show {
+  opacity: 1;
+}
+
+.text-left:hover {
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*=========================================================
+  PERFUME DESTACADO
+=========================================================*/
+.perfume-section {
+  position: relative;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.perfume-img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  transition: transform 0.8s ease, filter 0.6s ease;
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.perfume-img:hover {
+  transform: scale(1.12) translateY(-6px);
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
+}
+
+/*=========================================================
+  TARJETAS DE PERFUMES BOTELLA
+=========================================================*/
+.perfumes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  text-align: center;
+  margin: 40px 20px;
+}
+
+.perfume-bottle img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.perfume-bottle img:hover {
+  transform: scale(1.05);
+}
+
+.perfume-grid {
+  display: grid;
+  grid-template-columns: 120px 1fr 180px;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.perfume-desc {
+  background-color: #ffe4ec;
+  border: 2px solid #ffbcd4;
+  padding: 18px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #444;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 0 8px rgba(255, 150, 180, 0.4);
+  position: relative;
+  right: 20px;
+  line-height: 1.5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.perfume-desc:hover {
+  transform: scale(1.07) translateY(-6px);
+  box-shadow: 0 10px 18px rgba(255, 140, 160, 0.45);
+}
+
+/*=========================================================*/
+/*================== MAIN PARTIAL ========================*/
+/*=========================================================*/
+/*================== GLOBAL ==============================*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+/* =========================================================
+  HEADER / MENÚ
+========================================================= */
+header nav.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 30px 15px 30px !important;
+}
+
+header {
+  margin-top: 10px;
+}
+
+header nav.navbar .nav-link {
+  font-weight: bold;
+  font-size: 36px;
+  color: #ff9999;
+  transition: all 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-right: 15px;
+}
+
+header nav.navbar .nav-link:hover {
+  color: #ffc0c0;
+  transform: scale(1.1);
+  text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+/* Ocultar hamburguesa en escritorio */
+@media (min-width: 992px) {
+  .navbar-toggler {
+    display: none;
+  }
+}
+/* =========================================================
+  SUBTÍTULO
+========================================================= */
+.subtitulo {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin: 10px 0 40px 0;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #f7c59f, #f3a683);
+}
+
+/* =========================================================
+  BLOQUES DE IMÁGENES + TEXTO
+========================================================= */
+.image-block {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.image-block .text-left {
+  width: 250px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.5em;
+  color: #333;
+  background-color: #ffe6e6;
+  padding: 15px 12px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 1s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-block .text-left.show {
+  opacity: 1;
+}
+
+.image-block .text-left:hover {
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-block .images-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.image-block .images-group img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 10px;
+  opacity: 1;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.image-block .images-group img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.images-group img.animate__fadeInUp {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+  PERFUME DESTACADO
+========================================================= */
+.perfume-section {
+  position: relative;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.perfume-img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  transition: transform 0.8s ease, filter 0.6s ease;
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.perfume-img:hover {
+  transform: scale(1.12) translateY(-6px);
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
+}
+
+.perfume-overlay p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #C2185B;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.perfume-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #ffb6c1;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.perfume-btn:hover {
+  transform: scale(1.06);
+}
+
+/* =========================================================
+  GRILLA DE VALORES EN MOVIMIENTO
+========================================================= */
+.valores-grid {
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  padding: 10px 0;
+  position: relative;
+}
+
+.valores-grid-inner {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: slide-left 120s linear infinite;
+}
+
+.valor {
+  font-size: 20px;
+  font-weight: bold;
+  background: #ffe6ea;
+  padding: 10px 15px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* =========================================================
+  TARJETAS DE PERFUMES BOTELLA
+========================================================= */
+.perfumes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  text-align: center;
+  margin: 40px 20px;
+}
+
+.perfume-bottle img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.perfume-bottle img:hover {
+  transform: scale(1.05);
+}
+
+.perfume-title {
+  margin-top: 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.perfume-text {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/*==========================================================
+  CONTACTO
+===========================================================*/
+.contacto-imagen-section .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.contacto-form {
+  flex: 1;
+  min-width: 260px;
+  max-width: 380px;
+  width: 100%;
+  gap: 10px;
+  padding: 10px !important;
+}
+
+.contacto-title {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.contacto-form input, .contacto-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contacto-form input:hover, .contacto-form textarea:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+.contacto-btn {
+  background-color: #ffb6c1;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.contacto-btn:hover {
+  transform: scale(1.05);
+}
+
+/*==========================================================
+  FOOTER
+===========================================================*/
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+footer a.footer-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 50px;
+  padding: 5px 20px;
+  background-color: #ffb6c1;
+  color: #fff;
+  border: 2px solid #d4d4d4;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+footer a.footer-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ===============QUERIES RESPONSIVE================================ */
+@media (max-width: 320px) {
+  footer a.footer-btn {
+    width: 100%;
+    font-size: 20px;
+    line-height: 45px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+  footer a.footer-btn {
+    width: 95%;
+    font-size: 20px;
+    line-height: 48px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 376px) and (max-width: 414px) {
+  footer a.footer-btn {
+    width: 90%;
+    font-size: 20px;
+    line-height: 50px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 415px) and (max-width: 480px) {
+  footer a.footer-btn {
+    width: 90%;
+    font-size: 20px;
+    line-height: 60px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  footer a.footer-btn {
+    width: 85%;
+    font-size: 20px;
+    line-height: 55px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  footer a.footer-btn {
+    width: 90%;
+    font-size: 20px;
+    line-height: 60px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 992px) {
+  footer a.footer-btn {
+    width: auto;
+    font-size: 20px;
+    line-height: normal;
+    padding: 5px 20px;
+  }
+}
+/* =========================================================
+   BUTTONS
+========================================================= */
+/* Botón general */
+.btn,
+.perfume-btn,
+.contacto-btn,
+footer a.footer-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #ffb6c1;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover */
+.btn:hover,
+.perfume-btn:hover,
+.contacto-btn:hover,
+footer a.footer-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Variantes de botones si existen */
+.btn-secondary {
+  background-color: #ffc0cb;
+  color: #000;
+}
+
+/* ================= QUERIES RESPONSIVE ================== */
+/* Footer button responsive */
+@media (max-width: 320px) {
+  footer a.footer-btn {
+    width: 100%;
+    font-size: 20px;
+    line-height: 45px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+  footer a.footer-btn {
+    width: 95%;
+    font-size: 20px;
+    line-height: 48px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 376px) and (max-width: 414px) {
+  footer a.footer-btn {
+    width: 90%;
+    font-size: 20px;
+    line-height: 50px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 415px) and (max-width: 480px) {
+  footer a.footer-btn {
+    width: 90%;
+    font-size: 20px;
+    line-height: 60px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  footer a.footer-btn {
+    width: 85%;
+    font-size: 20px;
+    line-height: 55px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  footer a.footer-btn {
+    width: 90%;
+    font-size: 20px;
+    line-height: 60px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 992px) {
+  footer a.footer-btn {
+    width: auto;
+    font-size: 20px;
+    line-height: normal;
+    padding: 5px 20px;
+  }
+}
+/* =========================================================
+  HEADER / MENÚ
+========================================================= */
+header {
+  margin-top: 10px;
+}
+header nav.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 30px 15px 30px !important;
+}
+header nav.navbar .nav-link {
+  font-weight: bold;
+  font-size: 36px;
+  color: #ff9999;
+  transition: all 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-right: 15px;
+}
+header nav.navbar .nav-link:hover {
+  color: #ffc0c0;
+  transform: scale(1.1);
+  text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 992px) {
+  .navbar-toggler {
+    display: none;
+  }
+}
+/* =========================================================
+  SUBTÍTULO
+========================================================= */
+.subtitulo {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin: 10px 0 40px 0;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #f7c59f, #f3a683);
+}
+
+/* =========================================================
+  BLOQUES DE IMÁGENES + TEXTO
+========================================================= */
+.image-block {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+.image-block.animate__fadeInUp {
+  opacity: 1;
+  transform: translateY(0);
+}
+.image-block .text-left {
+  width: 250px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.5em;
+  color: #333;
+  background-color: #ffe6e6;
+  padding: 15px 12px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 1s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.image-block .text-left.show {
+  opacity: 1;
+}
+.image-block .text-left:hover {
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.image-block .images-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.image-block .images-group img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 10px;
+  opacity: 1;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+.image-block .images-group img.animate__fadeInUp {
+  opacity: 1;
+  transform: translateY(0);
+}
+.image-block .images-group img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================================
+  FOOTER
+========================================================= */
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+footer a.footer-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 50px;
+  padding: 5px 20px;
+  background-color: #ffb6c1;
+  color: #fff;
+  border: 2px solid #d4d4d4;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+footer a.footer-btn:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 320px) {
+  footer a.footer-btn {
+    width: 100%;
+    font-size: 20px;
+    line-height: 45px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+  footer a.footer-btn {
+    width: 95%;
+    font-size: 20px;
+    line-height: 48px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 376px) and (max-width: 414px) {
+  footer a.footer-btn {
+    width: 90%;
+    font-size: 20px;
+    line-height: 50px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 415px) and (max-width: 480px) {
+  footer a.footer-btn {
+    width: 90%;
+    font-size: 20px;
+    line-height: 60px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  footer a.footer-btn {
+    width: 85%;
+    font-size: 20px;
+    line-height: 55px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  footer a.footer-btn {
+    width: 90%;
+    font-size: 20px;
+    line-height: 60px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 992px) {
+  footer a.footer-btn {
+    width: auto;
+    font-size: 20px;
+    line-height: normal;
+    padding: 5px 20px;
+  }
+}
+
+/*=========================================================*/
+/*================== INDEX ===============================*/
+/*=========================================================*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+/* =========================================================
+  HEADER / MENÚ
+========================================================= */
+header {
+  margin-top: 10px;
+}
+header nav.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 30px 15px 30px !important;
+}
+header nav.navbar .nav-link {
+  font-weight: bold;
+  font-size: 36px;
+  color: #ff9999;
+  transition: all 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-right: 15px;
+}
+header nav.navbar .nav-link:hover {
+  color: #ffc0c0;
+  transform: scale(1.1);
+  text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
+@media (min-width: 992px) {
+  header nav.navbar .navbar-toggler {
+    display: none;
+  }
+}
+
+/* =========================================================
+  SUBTÍTULO
+========================================================= */
+.subtitulo {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin: 10px 0 40px 0;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #f7c59f, #f3a683);
+}
+
+/* =========================================================
+  BLOQUES DE IMÁGENES + TEXTO
+========================================================= */
+.image-block {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+.image-block .text-left {
+  width: 250px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.5em;
+  color: #333;
+  background-color: #ffe6e6;
+  padding: 15px 12px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 1s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.image-block .text-left.show {
+  opacity: 1;
+}
+.image-block .text-left:hover {
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.image-block .images-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.image-block .images-group img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 10px;
+  opacity: 1;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+.image-block .images-group img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.image-block .images-group img.animate__fadeInUp {
+  opacity: 1;
+  transform: translateY(0);
+}
+.image-block.animate__fadeInUp {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+  PERFUME DESTACADO
+========================================================= */
+.perfume-section {
+  position: relative;
+  text-align: center;
+  margin: 40px 0;
+}
+.perfume-section .perfume-img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  transition: transform 0.8s ease, filter 0.6s ease;
+  transform-origin: center;
+  cursor: pointer;
+}
+.perfume-section .perfume-img:hover {
+  transform: scale(1.12) translateY(-6px);
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
+}
+.perfume-section .perfume-overlay p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #C2185B;
+  text-align: center;
+  margin: 30px 0 15px 0;
+  line-height: 1.6;
+}
+.perfume-section .perfume-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #ffb6c1;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.perfume-section .perfume-btn:hover {
+  transform: scale(1.06);
+}
+
+/* =========================================================
+  GRILLA DE VALORES EN MOVIMIENTO
+========================================================= */
+.valores-grid {
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  padding: 10px 0;
+  position: relative;
+}
+.valores-grid .valores-grid-inner {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: slide-left 120s linear infinite;
+}
+.valores-grid .valores-grid-inner .valor {
+  font-size: 20px;
+  font-weight: bold;
+  background: #ffe6ea;
+  padding: 10px 15px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/*=========================================================*/
+/*================== PORTAFOLIO =========================*/
+/*=========================================================*/
+/* PERFUME GRID DETALLE */
+.perfume-grid {
+  display: grid;
+  grid-template-columns: 120px 1fr 180px;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.perfume-name-side {
+  font-weight: bold;
+  font-size: 20px;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  text-align: center;
+  position: relative;
+  left: 25px;
+}
+
+.perfume-desc {
+  background-color: #ffe4ec;
+  border: 2px solid #ffbcd4;
+  padding: 18px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #444;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 0 8px rgba(255, 150, 180, 0.4);
+  position: relative;
+  right: 20px;
+  line-height: 1.5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.perfume-desc:hover {
+  transform: scale(1.07) translateY(-6px);
+  box-shadow: 0 10px 18px rgba(255, 140, 160, 0.45);
+}
+
+.perfume-desc span {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.perfume-desc .nombre {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.perfume-desc .ml {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.perfume-desc .texto {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.perfume-desc .precio {
+  font-size: 18px;
+  font-weight: 800;
+  margin-top: 10px;
+  color: #222;
+}
+
+/* CARRUSEL */
+.perfume-img {
+  width: 100%;
+  max-width: 500px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.perfume-bottle img {
+  width: 100%;
+  max-width: 300px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.perfume-bottle img:hover {
+  transform: scale(1.05);
+}
+
+/* ANIMACIONES */
+.animate__fadeInUp {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: all 0.8s ease-out;
+}
+
+/*=========================================================*/
+/*================== CLIENTES / TESTIMONIOS ===============*/
+/*=========================================================*/
+.testimonios-container {
+  position: relative;
+  top: -90px;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* centra todo el bloque horizontalmente */
+}
+
+/* CONTENEDOR GENERAL */
+.cilindro-y-testimonios {
+  display: grid;
+  grid-template-columns: 300px auto 300px;
+  align-items: center;
+  justify-items: center;
+  max-width: 1100px;
+  position: relative;
+  gap: 12px;
+  margin: 0 auto; /* centra el bloque completo */
+  transform: translateX(-30px); /* 🔹 mueve todo un poquito a la izquierda para compensar los offsets */
+  overflow-x: hidden;
+}
+
+/* COLUMNAS DE TESTIMONIOS */
+.testimonios-lado {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  position: relative; /* 🔹 los offsets negativos funcionan respecto a este contenedor */
+}
+
+/* OFFSETS para acercar los cuadros al cilindro */
+.testimonios-lado:first-child {
+  right: -130px;
+}
+
+.testimonios-lado:last-child {
+  left: -130px;
+}
+
+.clientes-texto {
+  font-size: 1.5rem; /* 🔹 tamaño más pequeño */
+  font-weight: bold; /* mantiene la negrita */
+  text-align: center; /* centra el texto */
+  margin-bottom: 20px; /* espacio debajo del título */
+}
+
+/* TARJETAS */
+.testimonio-card {
+  background-color: #f8d7da;
+  padding: 20px 22px;
+  border-radius: 10px;
+  color: #000;
+  min-height: 200px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: transform 0.6s ease, opacity 0.6s ease, box-shadow 0.6s ease;
+}
+
+/* ANIMACIÓN JS */
+.testimonio-card.animate__animated.animate__fadeInUp {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+/* HOVER ZOOM + MOVIMIENTO */
+.testimonio-card:hover {
+  transform: scale(1.08) translateY(-8px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* CILINDRO */
+.cilindro-container {
+  width: 720px;
+  height: 640px;
+  border-radius: 200px/90px;
+  overflow: hidden;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
+  flex-shrink: 0;
+  position: relative;
+  top: -30px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.cilindro-container.animate__fadeInUp {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.cilindro-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.cilindro-container:hover img {
+  transform: scale(1.05);
+}
+
+.cilindro-img:hover {
+  transform: scale(1.12) translateY(-6px);
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
+}
+
+/*=========================================================*/
+/*================== SERVICIOS ===========================*/
+/*=========================================================*/
+/* Fondo rosa para tarjetas */
+.bg-pink {
+  background-color: #ffc0cb;
+  border-radius: 5px;
+}
+
+/* Imagen principal de servicios */
+.servicios-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Contenedor de cada tarjeta */
+.servicio-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.servicio-card:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+.servicio-card .img-text {
+  margin-top: 10px;
+  padding: 10px;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+.servicio-card .img-text h6 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.servicio-card .img-text p {
+  font-size: 0.85rem;
+  line-height: 1.2rem;
+  font-weight: bold;
+}
+
+/*-------------Efecto contenedor inicial---------*/
+/* Animación inicial: elementos invisibles y abajo */
+.servicio-img,
+.servicio-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+/* Clase que se agrega al intersectar para animar */
+.animate__fadeInUp {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/*=========================================================*/
+/*================== CONTACTO ============================*/
+/*=========================================================*/
+/* CUADRO DE TITULOS */
+.info-box {
+  background-color: #ffc0cb;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.info-box h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.info-box:hover {
+  transform: scale(1.05) translateY(-3px);
+}
+
+/* Información de la empresa en cuadro */
+.info-content {
+  background-color: #ffe6e6;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.info-content:hover {
+  transform: scale(1.03) translateY(-2px);
+}
+
+/* Ajuste de formulario */
+.contacto-form {
+  gap: 10px;
+  padding: 10px !important;
+}
+
+.contacto-form .form-group {
+  margin-bottom: 10px;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contacto-form input:hover,
+.contacto-form textarea:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+/* Botón */
+.contacto-btn {
+  background-color: #ffb6c1;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.contacto-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Imagen de flores más cerca del formulario */
+.form-bottom-image img {
+  margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.8s ease, box-shadow 0.6s ease;
+}
+
+.form-bottom-image img:hover {
+  transform: scale(1.08) translateY(-6px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* ========= DOS IMÁGENES GRANDES DEBAJO DEL FORMULARIO Y CUADRO DE DIRECCIÓN ========= */
+.info-image-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.info-image {
+  width: 300px; /* Tamaño original respetado */
+  height: 300px; /* Tamaño original respetado */
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.8s ease, box-shadow 0.6s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.info-image:hover {
+  transform: scale(1.12) translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+.info-image.animate__fadeInUp {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========= CINCO IMÁGENES ABAJO ========= */
+.contact-images {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.contact-images img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  /* Animación inicial: invisibles y un poco más pequeñas */
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  transition: transform 0.5s ease, opacity 0.8s ease-out;
+}
+
+/* Animación al entrar en viewport */
+.contact-images img.animate__fadeInUp {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Hover: movimiento hacia arriba + zoom */
+.contact-images img:hover {
+  transform: translateY(-10px) scale(1.15);
+  transition: transform 0.5s ease;
+}
+
+/*# sourceMappingURL=style.css4.map */
